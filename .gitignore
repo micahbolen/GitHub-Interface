@@ -1,10 +1,1 @@
-# Ignore 3rd-party Node modules
-node_modules
-
-# Ignore test coverage reports
-coverage
-
-# Ignore log files
-*.log
-
 .DS_Store

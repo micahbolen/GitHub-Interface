@@ -1,0 +1,17 @@
+<label for="repo">Search for a GitHub org:</label>
+<input type="text" name="org" ng-model="org" class="search-query" placeholder="redjack">
+<h1 ng-show="repos.length > 0">{{org}} Repos:</h1>
+      <table ng-show="repos.length > 0">
+        <thead>
+        <tr>
+          <th>Project</th>
+          <th>Description</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="repo in repos | orderBy:'name'">
+          <td><a href="{{repo.html_url}}" target="_blank">{{repo.name}}</a></td>
+          <td>{{repo.description}}</td>
+        </tr>
+        </tbody>
+    </table>
